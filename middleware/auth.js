@@ -1,21 +1,21 @@
 function ensureAuthenticated(req, res, next) {
-    if (req.isAuthenticated()) {
-        return next();
-    }
+  if (req.isAuthenticated()) {
+    return next();
+  }
 
-    req.session.returnTo = req.originalUrl;
-    res.redirect('/users/login');
+  req.session.returnTo = req.originalUrl;
+  res.redirect('/users/login');
 }
 
 function ensureGuest(req, res, next) {
-    if (req.isAuthenticated()) {
-        return res.redirect('/assignments/my');
-    }
+  if (req.isAuthenticated()) {
+    return res.redirect('/assignments/my');
+  }
 
-    next();
+  next();
 }
 
 module.exports = {
-    ensureAuthenticated,
-    ensureGuest
+  ensureAuthenticated,
+  ensureGuest
 };

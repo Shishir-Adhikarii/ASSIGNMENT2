@@ -1,113 +1,116 @@
-<div class="container py-5">
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-5">
 
-    <div class="d-flex flex-column flex-md-row
-                justify-content-between align-items-md-center mb-5">
+  <div>
+    <span class="badge bg-primary mb-2">
+      PRIVATE DASHBOARD
+    </span>
 
-        <div>
-            <span class="badge bg-primary mb-2">
-                PRIVATE DASHBOARD
-            </span>
+    <h1 class="fw-bold">
+      My Assignments
+    </h1>
 
-            <h1 class="fw-bold">
-                My Assignments
-            </h1>
+    <p class="text-muted">
+      Manage the assignments you have created.
+    </p>
+  </div>
 
-            <p class="text-muted">
-                Manage the assignments you have created.
-            </p>
+  <a
+    href="/assignments/add/new"
+    class="btn btn-primary"
+  >
+    + Add Assignment
+  </a>
+
+</div>
+
+<div class="row g-4">
+
+  {{#each assignments}}
+
+    <div class="col-md-6 col-lg-4">
+
+      <div class="assignment-card h-100">
+
+        <div class="d-flex justify-content-between">
+
+          <span class="badge bg-light text-dark">
+            {{course}}
+          </span>
+
+          <span class="badge bg-secondary">
+            {{priority}}
+          </span>
+
         </div>
 
-        <a href="/assignments/add/new"
-           class="btn btn-primary">
-            + Add Assignment
+        <h3 class="h5 fw-bold mt-3">
+          {{title}}
+        </h3>
+
+        <p class="text-muted">
+          {{description}}
+        </p>
+
+        <p>
+          <strong>Due:</strong> {{dueDate}}
+        </p>
+
+        <p>
+          <strong>Status:</strong> {{status}}
+        </p>
+
+        <div class="d-flex gap-2 mt-4">
+
+          <a
+            href="/assignments/{{_id}}"
+            class="btn btn-outline-primary btn-sm"
+          >
+            View
+          </a>
+
+          <a
+            href="/assignments/{{_id}}/edit"
+            class="btn btn-outline-dark btn-sm"
+          >
+            Edit
+          </a>
+
+          <a
+            href="/assignments/{{_id}}/delete"
+            class="btn btn-outline-danger btn-sm"
+          >
+            Delete
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  {{else}}
+
+    <div class="col-12">
+
+      <div class="empty-state">
+
+        <h3>No assignments yet</h3>
+
+        <p class="text-muted">
+          Add your first assignment to get started.
+        </p>
+
+        <a
+          href="/assignments/add/new"
+          class="btn btn-primary"
+        >
+          Add Assignment
         </a>
 
-    </div>
-
-    <div class="row g-4">
-
-        {{#each assignments}}
-
-            <div class="col-md-6 col-lg-4">
-
-                <div class="assignment-card h-100">
-
-                    <div class="d-flex justify-content-between">
-
-                        <span class="badge bg-light text-dark">
-                            {{course}}
-                        </span>
-
-                        <span class="badge bg-secondary">
-                            {{priority}}
-                        </span>
-
-                    </div>
-
-                    <h3 class="h5 fw-bold mt-3">
-                        {{title}}
-                    </h3>
-
-                    <p class="text-muted">
-                        {{description}}
-                    </p>
-
-                    <p>
-                        <strong>Due:</strong> {{dueDate}}
-                    </p>
-
-                    <p>
-                        <strong>Status:</strong> {{status}}
-                    </p>
-
-                    <div class="d-flex gap-2 mt-4">
-
-                        <a
-                            href="/assignments/{{_id}}"
-                            class="btn btn-outline-primary btn-sm">
-                            View
-                        </a>
-
-                        <a
-                            href="/assignments/{{_id}}/edit"
-                            class="btn btn-outline-dark btn-sm">
-                            Edit
-                        </a>
-
-                        <a
-                            href="/assignments/{{_id}}/delete"
-                            class="btn btn-outline-danger btn-sm">
-                            Delete
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        {{else}}
-
-            <div class="col-12">
-                <div class="empty-state">
-
-                    <h3>No assignments yet</h3>
-
-                    <p class="text-muted">
-                        Add your first assignment to get started.
-                    </p>
-
-                    <a
-                        href="/assignments/add/new"
-                        class="btn btn-primary">
-                        Add Assignment
-                    </a>
-
-                </div>
-            </div>
-
-        {{/each}}
+      </div>
 
     </div>
+
+  {{/each}}
 
 </div>

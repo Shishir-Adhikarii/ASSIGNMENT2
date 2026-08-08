@@ -1,8 +1,155 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f7f8fb;
+  color: #202124;
 }
 
-a {
-  color: #00B7FF;
+main {
+  min-height: 70vh;
+}
+
+.navbar-brand {
+  letter-spacing: -0.5px;
+}
+
+.hero-section {
+  background: linear-gradient(
+    135deg,
+    #f8f9ff 0%,
+    #ffffff 100%
+  );
+}
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.hero-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+}
+
+.hero-card-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: #198754;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.assignment-preview {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.assignment-preview:last-child {
+  border-bottom: none;
+}
+
+.assignment-preview h5 {
+  margin: 4px 0 0;
+}
+
+.assignment-preview small {
+  color: #777;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  height: 100%;
+  border: 1px solid #e8e8e8;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.page-header {
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.search-box {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.assignment-card {
+  background: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 16px;
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.assignment-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+.form-container {
+  max-width: 750px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 18px;
+  padding: 35px;
+  border: 1px solid #e5e5e5;
+}
+
+.empty-state {
+  background: white;
+  padding: 60px 30px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px dashed #ccc;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid #ddd;
+}
+
+.divider span {
+  padding: 0 12px;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+footer {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-container {
+    padding: 25px;
+  }
 }

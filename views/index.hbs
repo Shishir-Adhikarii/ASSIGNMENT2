@@ -1,135 +1,144 @@
-<section class="hero-section">
-    <div class="container py-5">
-        <div class="row align-items-center min-vh-75">
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center">
 
-            <div class="col-lg-7">
+      <div class="col-lg-7">
 
-                <span class="badge bg-primary mb-3">
-                    STUDENT ORGANIZATION PLATFORM
-                </span>
+        <span class="badge bg-primary mb-3">
+          STUDENT ORGANIZATION PLATFORM
+        </span>
 
-                <h1 class="display-3 fw-bold">
-                    Stay ahead of every assignment.
-                </h1>
+        <h1 class="display-3 fw-bold">
+          Stay ahead of every assignment.
+        </h1>
 
-                <p class="lead text-muted mt-4">
-                    AssignmentHub helps students organize assignments,
-                    track deadlines, monitor progress, and keep
-                    important coursework in one convenient place.
-                </p>
+        <p class="lead text-muted mt-4">
+          AssignmentHub helps students organize assignments,
+          track deadlines, monitor progress, and keep
+          important coursework in one convenient place.
+        </p>
 
-                <div class="mt-4">
+        <div class="mt-4">
 
-                    <a href="/assignments" class="btn btn-primary btn-lg me-2">
-                        Browse Directory
-                    </a>
+          <a href="/assignments" class="btn btn-primary btn-lg me-2">
+            Browse Directory
+          </a>
 
-                    {{#if currentUser}}
+          {{#if currentUser}}
 
-                        <a href="/assignments/add/new"
-                           class="btn btn-outline-dark btn-lg">
-                            Add Assignment
-                        </a>
+            <a
+              href="/assignments/add/new"
+              class="btn btn-outline-dark btn-lg"
+            >
+              Add Assignment
+            </a>
 
-                    {{else}}
+          {{else}}
 
-                        <a href="/users/register"
-                           class="btn btn-outline-dark btn-lg">
-                            Create Account
-                        </a>
+            <a
+              href="/users/register"
+              class="btn btn-outline-dark btn-lg"
+            >
+              Create Account
+            </a>
 
-                    {{/if}}
-
-                </div>
-
-            </div>
-
-            <div class="col-lg-5 mt-5 mt-lg-0">
-
-                <div class="hero-card shadow">
-                    <div class="hero-card-header">
-                        <span>Assignment Overview</span>
-                        <span class="status-dot"></span>
-                    </div>
-
-                    <div class="assignment-preview">
-                        <div>
-                            <small>COMP 2068</small>
-                            <h5>JavaScript Frameworks</h5>
-                        </div>
-
-                        <span class="badge bg-danger">
-                            High
-                        </span>
-                    </div>
-
-                    <div class="assignment-preview">
-                        <div>
-                            <small>COMP 1009</small>
-                            <h5>Mainframe Project</h5>
-                        </div>
-
-                        <span class="badge bg-warning text-dark">
-                            Medium
-                        </span>
-                    </div>
-
-                    <div class="assignment-preview">
-                        <div>
-                            <small>COMP 1011</small>
-                            <h5>Database Assignment</h5>
-                        </div>
-
-                        <span class="badge bg-success">
-                            Complete
-                        </span>
-                    </div>
-                </div>
-
-            </div>
+          {{/if}}
 
         </div>
+
+      </div>
+
+      <div class="col-lg-5 mt-5 mt-lg-0">
+
+        <div class="hero-card shadow">
+          <div class="hero-card-header">
+            <span>Assignment Overview</span>
+            <span class="status-dot"></span>
+          </div>
+
+          <div class="assignment-preview">
+            <div>
+              <small>COMP 2068</small>
+              <h5>JavaScript Frameworks</h5>
+            </div>
+
+            <span class="badge bg-danger">
+              High
+            </span>
+          </div>
+
+          <div class="assignment-preview">
+            <div>
+              <small>COMP 1009</small>
+              <h5>Mainframe Project</h5>
+            </div>
+
+            <span class="badge bg-warning text-dark">
+              Medium
+            </span>
+          </div>
+
+          <div class="assignment-preview">
+            <div>
+              <small>COMP 1011</small>
+              <h5>Database Assignment</h5>
+            </div>
+
+            <span class="badge bg-success">
+              Complete
+            </span>
+          </div>
+        </div>
+
+      </div>
+
     </div>
+  </div>
 </section>
 
-<section class="container py-5">
+<section class="py-5 bg-light">
+  <div class="container">
 
     <div class="text-center mb-5">
-        <h2 class="fw-bold">Everything in one place</h2>
-        <p class="text-muted">
-            Simple tools for staying organized throughout the semester.
-        </p>
+      <h2 class="fw-bold">
+        Everything in one place
+      </h2>
+
+      <p class="text-muted">
+        Simple tools for staying organized throughout the semester.
+      </p>
     </div>
 
     <div class="row g-4">
 
-        <div class="col-md-4">
-            <div class="feature-card">
-                <h3>📚 Organize</h3>
-                <p>
-                    Keep assignments organized by course and priority.
-                </p>
-            </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h3>📚 Organize</h3>
+          <p>
+            Keep assignments organized by course and priority.
+          </p>
         </div>
+      </div>
 
-        <div class="col-md-4">
-            <div class="feature-card">
-                <h3>📅 Track</h3>
-                <p>
-                    Keep track of due dates and assignment progress.
-                </p>
-            </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h3>📅 Track</h3>
+          <p>
+            Keep track of due dates and assignment progress.
+          </p>
         </div>
+      </div>
 
-        <div class="col-md-4">
-            <div class="feature-card">
-                <h3>🔎 Search</h3>
-                <p>
-                    Quickly find assignments using keyword search.
-                </p>
-            </div>
+      <div class="col-md-4">
+        <div class="feature-card">
+          <h3>🔎 Search</h3>
+          <p>
+            Quickly find assignments using keyword search.
+          </p>
         </div>
+      </div>
 
     </div>
 
+  </div>
 </section>
