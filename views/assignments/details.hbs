@@ -1,0 +1,70 @@
+<div class="container py-5">
+
+    <div class="form-container">
+
+        <span class="badge bg-primary mb-3">
+            ASSIGNMENT DETAILS
+        </span>
+
+        <h1 class="fw-bold">
+            {{assignment.title}}
+        </h1>
+
+        <p class="lead text-muted">
+            {{assignment.course}}
+        </p>
+
+        <hr>
+
+        <p>
+            <strong>Description</strong>
+        </p>
+
+        <p>
+            {{assignment.description}}
+        </p>
+
+        <div class="row mt-4">
+
+            <div class="col-md-4">
+                <strong>Due Date</strong>
+                <p>{{assignment.dueDate}}</p>
+            </div>
+
+            <div class="col-md-4">
+                <strong>Priority</strong>
+                <p>{{assignment.priority}}</p>
+            </div>
+
+            <div class="col-md-4">
+                <strong>Status</strong>
+                <p>{{assignment.status}}</p>
+            </div>
+
+        </div>
+
+        <div class="d-flex gap-2 mt-4">
+
+            <a
+                href="/assignments/{{assignment._id}}/edit"
+                class="btn btn-primary">
+                Edit
+            </a>
+
+            <a
+                href="/assignments/{{assignment._id}}/delete"
+                class="btn btn-outline-danger">
+                Delete
+            </a>
+
+            <a
+                href="/assignments/my"
+                class="btn btn-outline-secondary">
+                Back
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
