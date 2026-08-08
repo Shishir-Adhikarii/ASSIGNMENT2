@@ -51,11 +51,11 @@ This allows users to find relevant assignments more quickly and improves the usa
 
 ## Live Application
 
-[INSERT YOUR RENDER URL HERE]
+https://assignment2-4vvg.onrender.com
 
 ## GitHub Repository
 
-[INSERT YOUR GITHUB REPOSITORY URL HERE]
+https://github.com/Shishir-Adhikarii/ASSIGNMENT2
 
 ## Database
 
